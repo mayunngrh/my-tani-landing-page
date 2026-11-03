@@ -1,0 +1,63 @@
+.button {
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: var(--button-radius);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 650;
+  gap: var(--space-2);
+  justify-content: center;
+  min-height: var(--button-height);
+  padding: 0.65rem var(--button-padding-inline);
+  text-align: center;
+  text-decoration: none;
+  transition: background-color var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
+}
+
+.button:active:not(:disabled) { transform: scale(0.98); }
+.button:disabled { cursor: not-allowed; opacity: 0.55; }
+.primary { background: var(--color-brand-primary); color: var(--color-cream-100); }
+.primary:hover:not(:disabled) { background: var(--color-olive-900); }
+.secondary { background: transparent; border-color: var(--color-brand-primary); color: var(--color-text-primary); }
+.secondary:hover:not(:disabled) { background: var(--color-husk-300); }
+.glass { background: var(--color-cream-100); border-color: rgb(57 64 30 / 30%); color: var(--color-olive-900); }
+.glass:hover:not(:disabled) { background: var(--color-cream-200); }
+.default { min-height: var(--button-height); }
+.small { min-height: 2.75rem; padding-inline: var(--space-4); font-size: 0.875rem; }
+
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .glass {
+    background: rgb(247 241 227 / 92%);
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
+    backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
+  }
+  .glass:hover:not(:disabled) { background: var(--color-cream-200); }
+}
+
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  .glass { background: var(--color-cream-100); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+
+.glassPanel { border-radius: var(--radius-large); padding: var(--space-6); }
+.field { display: grid; gap: var(--space-2); }
+.label { font-size: 0.9375rem; font-weight: 650; }
+.input {
+  background: var(--color-cream-100);
+  border: 1px solid var(--color-olive-700);
+  border-radius: var(--radius-small);
+  color: var(--color-text-primary);
+  font: inherit;
+  min-height: 3rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+}
+.input::placeholder { color: #626753; opacity: 1; }
+.input:disabled { background: var(--color-cream-200); cursor: not-allowed; }
+.input[aria-invalid="true"] { border-color: #9d322a; }
+.hint, .error { font-size: var(--font-size-small); margin: 0; }
+.error { color: #8b2823; }

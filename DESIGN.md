@@ -88,7 +88,20 @@ When the browser supports `prefers-reduced-transparency: reduce` or `prefers-con
 
 ## Interaction and components
 
-These are specifications for future implementation; the corresponding React components have not yet been built.
+The starter components live in `src/components/ui`: `Button`, `ButtonLink`, `GlassPanel`, and `TextField`. The visual reference at `/design-system` shows their current appearance and states. Navigation, product details, and contact forms below remain specifications for future implementation.
+
+```tsx
+import { Button, ButtonLink } from "@/components/ui/button";
+import { GlassPanel } from "@/components/ui/glass-panel";
+import { TextField } from "@/components/ui/text-field";
+
+<Button type="submit">Send enquiry</Button>
+<ButtonLink href="#product" variant="secondary">View product</ButtonLink>
+<GlassPanel tone="dark">Supporting information</GlassPanel>
+<TextField id="email" label="Email" type="email" required />
+```
+
+`Button` defaults to `type="button"`; use `type="submit"` only in an actual form. `ButtonLink` is for navigation, and has no disabled state. `TextField` requires a unique `id` and visible `label`, and supports `hint` or `error` with accessible descriptions. The example fields on the preview do not submit data.
 
 - **Navigation:** semantic `nav`; readable light or dark glass; links and a clear enquiry CTA. Provide keyboard-operable mobile menu, visible focus, and a non-glass fallback.
 - **Primary button:** solid olive on cream or cream on olive, 48 px minimum height, pill radius, concise action label. Include hover, pressed, disabled, loading (if relevant) and focus-visible states. Do not depend on glass to communicate priority.
