@@ -1,1 +1,77 @@
 @import "tailwindcss";
+@import "../styles/tokens.css";
+
+@theme inline {
+  --color-background: var(--color-surface-page);
+  --color-foreground: var(--color-text-primary);
+  --color-brand: var(--color-brand-primary);
+  --color-shell: var(--color-brand-secondary);
+  --color-cream: var(--color-cream-100);
+  --color-husk: var(--color-husk-300);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
+}
+
+html {
+  background: var(--color-surface-page);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+}
+
+body {
+  min-height: 100vh;
+  line-height: var(--line-height-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-husk-300);
+  color: var(--color-olive-900);
+}
+
+:focus-visible {
+  outline: var(--focus-width) solid var(--color-focus);
+  outline-offset: var(--focus-offset);
+}
+
+/* Solid base is intentional: it is the fallback when blur is unavailable. */
+.glass-surface {
+  color: var(--glass-text);
+  background: var(--glass-fallback);
+  border: var(--glass-border-width) solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-surface--dark {
+  --glass-text: var(--color-cream-100);
+  --glass-fallback: var(--color-olive-900);
+  --glass-tint: rgb(38 44 20 / 92%);
+  --glass-border: rgb(247 241 227 / 24%);
+  --color-focus: var(--color-cream-100);
+}
+
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .glass-surface {
+    background: var(--glass-tint);
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
+    backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
+  }
+}
+
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  .glass-surface {
+    background: var(--glass-fallback);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

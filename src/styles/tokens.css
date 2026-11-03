@@ -1,0 +1,67 @@
+/* Primitives: approximate samples from the supplied logo, not certified brand values. */
+:root {
+  --color-olive-900: #262c14;
+  --color-olive-800: #39401e;
+  --color-olive-700: #4a532b;
+  --color-brown-800: #512f1a;
+  --color-cream-100: #f7f1e3;
+  --color-cream-200: #ede4d3;
+  --color-husk-300: #e4d9c5;
+  --color-white: #ffffff;
+
+  /* Local system stacks keep the foundation available offline. */
+  --font-heading: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --font-body: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-size-small: 0.875rem;
+  --font-size-body: 1rem;
+  --font-size-lead: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+  --font-size-heading: clamp(2rem, 1.4rem + 3vw, 4rem);
+  --font-size-display: clamp(3rem, 1.6rem + 6vw, 6.75rem);
+  --line-height-body: 1.6;
+  --line-height-heading: 1.05;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --radius-small: 0.5rem;
+  --radius-medium: 1rem;
+  --radius-large: 1.5rem;
+  --radius-pill: 9999px;
+  --duration-fast: 150ms;
+  --duration-normal: 240ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  /* Semantic aliases: components should prefer these over raw primitives. */
+  --color-surface-page: var(--color-cream-100);
+  --color-surface-muted: var(--color-cream-200);
+  --color-surface-inverse: var(--color-olive-800);
+  --color-text-primary: var(--color-olive-900);
+  --color-text-inverse: var(--color-cream-100);
+  --color-brand-primary: var(--color-olive-800);
+  --color-brand-secondary: var(--color-brown-800);
+  --color-focus: var(--color-olive-800);
+  --space-section: clamp(4rem, 3rem + 5vw, 8rem);
+  --space-page-gutter: clamp(1.25rem, 0.8rem + 2vw, 3rem);
+  --container-content: 80rem;
+  --focus-width: 3px;
+  --focus-offset: 3px;
+
+  /* Component-level glass tokens, deliberately restrained for readable text. */
+  --glass-text: var(--color-olive-900);
+  --glass-fallback: var(--color-cream-100);
+  --glass-tint: rgb(247 241 227 / 92%);
+  --glass-border: rgb(57 64 30 / 20%);
+  --glass-border-width: 1px;
+  --glass-blur: 18px;
+  --glass-saturation: 120%;
+  --glass-shadow: 0 8px 28px rgb(38 44 20 / 12%), inset 0 1px 0 rgb(255 255 255 / 45%);
+  --button-height: 3rem;
+  --button-padding-inline: var(--space-6);
+  --button-radius: var(--radius-pill);
+}
