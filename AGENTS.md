@@ -14,7 +14,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Use the installed `design-system` skill when changing tokens or component specifications; use `frontend-design` or `design-taste-frontend` for visual direction; use `apple-design` for translucent materials and fluid interaction. Apply `ui-ux-pro-max` for accessibility and responsive review. Use `imagegen` only when imagery is needed and requested or justified.
 - Reuse the semantic tokens in `src/styles/tokens.css` and the glass surface utilities in `src/app/globals.css`. Keep contrast, keyboard focus, reduced-motion and reduced-transparency fallbacks intact.
 - Preserve the user's supplied logo. Approximate palette samples and the proposed fonts are not final brand assets. Do not state draft specifications, certifications, business claims, or social impact as verified facts without confirmation.
-- The existing homepage is a starter. Do not treat the design-system setup as approval to implement the full landing page.
+- Keep the landing page aligned with the approved section plan and the Coconut Lens direction. Do not introduce unverified company or product claims.
 
 ## Git workflow
 

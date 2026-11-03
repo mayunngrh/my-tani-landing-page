@@ -88,7 +88,7 @@ When the browser supports `prefers-reduced-transparency: reduce` or `prefers-con
 
 ## Interaction and components
 
-The starter components live in `src/components/ui`: `Button`, `ButtonLink`, `GlassPanel`, and `TextField`. The visual reference at `/design-system` shows their current appearance and states. Navigation, product details, and contact forms below remain specifications for future implementation.
+The starter components live in `src/components/ui`: `Button`, `ButtonLink`, `GlassPanel`, and `TextField`. The visual reference at `/design-system` shows their current appearance and states. The homepage contains the planned navigation, product details, export information and direct contact links. A contact form remains a future specification; the site does not currently collect or submit form data.
 
 ```tsx
 import { Button, ButtonLink } from "@/components/ui/button";
@@ -119,7 +119,7 @@ Use semantic landmarks, a logical heading hierarchy, keyboard-operable controls,
 
 ## Proposed homepage structure
 
-Navigation → Hero → About → Semi-husked Coconut → Specifications → Farmer Story → Process → Export Information → Insights (when content is ready) → Contact → Footer. Prioritize a clear enquiry path. This remains a content plan, not an instruction to invent details or build the landing page now.
+Navigation → Hero → About → Semi-husked Coconut → Specifications → Farmer Story → Process → Export Information → FAQ → Contact → Footer. Prioritize a clear enquiry path. The FAQ provides initial educational content; longer insights can be added when verified material is ready.
 
 ## Editorial and verification checklist
 
