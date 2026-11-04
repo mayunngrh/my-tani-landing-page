@@ -115,6 +115,8 @@ import { TextField } from "@/components/ui/text-field";
 
 Motion should clarify an action or a change of state. Use a 150–240 ms transition as a starting point for simple hover/focus changes; more complex gestures need deliberate, interruptible behavior. Do not place continuous motion behind reading content or animate each section by default. Honor `prefers-reduced-motion` with static or immediate state changes. Preserve visible focus indicators on every surface; on an inverse section, set a contrasting local `--color-focus`.
 
+The selected navigation item uses a brief 240 ms horizontal slide with a restrained wiggle to make the section change clear. The site-wide reduced-motion rule shortens that movement to an almost immediate state change.
+
 Use semantic landmarks, a logical heading hierarchy, keyboard-operable controls, alt text, adequate touch targets, and responsive layouts without horizontal page overflow. Never rely on color or motion alone to convey an action or status.
 
 ## Proposed homepage structure

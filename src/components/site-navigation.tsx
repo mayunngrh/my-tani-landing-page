@@ -8,7 +8,8 @@ const links = [
   { href: "#about", label: "Our story", sections: ["home", "about", "people"] },
   { href: "#product", label: "Our coconut", sections: ["product", "specifications"] },
   { href: "#process", label: "Our process", sections: ["process"] },
-  { href: "#export", label: "Export info", sections: ["export", "insights"] },
+  { href: "#export", label: "Export info", sections: ["export"] },
+  { href: "#insights", label: "FAQs", sections: ["insights"] },
 ];
 
 const contact = { href: "#contact", label: "Let’s talk", sections: ["contact"] };
