@@ -166,3 +166,7 @@ The email, WhatsApp and location cards are single full-card links with decorativ
 ## Source-content coverage review
 
 The bilingual source-copy review is tracked in `docs/content-review.md`. The owner confirmed publication of the supplied specifications and business claims. About, product applications, advantages, specifications, weight grades, packaging, and export details now reflect that approval in both languages. Source weight ranges are preserved, with boundary grading agreed in the quotation. The source term “CF” is retained as cost and freight without inventing a different formal code. The ambiguous “water content max 20%” is still excluded until its measurement basis is defined; both languages use the supplied English fresh-coconut-water statement. Owner approval is not independent verification or certification. Keep the checklist synchronized when corrections arrive.
+
+## Browser tab icon
+
+The favicon uses the complete bowl-shaped coconut symbol extracted from the second coconut in `public/images/mytani-wordmark-transparent.png`, preserving the supplied artwork and colors. It is centered on a transparent square. `src/app/favicon.ico` contains 16, 32 and 48 px variants, and `src/app/icon.png` provides a 64 px PNG. Next.js file-based metadata exposes these icons for all locale routes and the design-system page. The website wordmark is unchanged.
