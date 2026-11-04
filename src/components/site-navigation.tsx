@@ -1,10 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import type { Locale } from "@/i18n/config";
+import { getTranslator, type MessageKey } from "@/i18n/messages";
+import { LanguageSwitcher } from "./language-switcher";
 import { useEffect, useState } from "react";
 import styles from "@/app/page.module.css";
 
-const links = [
+const links: { href: string; label: MessageKey; sections: string[] }[] = [
   { href: "#home", label: "Home", sections: ["home"] },
   { href: "#about", label: "Story", sections: ["about", "people"] },
   { href: "#product", label: "Coconuts", sections: ["product", "specifications"] },
@@ -13,18 +16,20 @@ const links = [
   { href: "#insights", label: "FAQs", sections: ["insights"] },
 ];
 
-const contact = { href: "#contact", label: "Let’s talk", sections: ["contact"] };
+const contact: { href: string; label: MessageKey; sections: string[] } = { href: "#contact", label: "Let’s talk", sections: ["contact"] };
 const navigation = [...links, contact];
 
-export function Brand() {
+export function Brand({ locale }: { locale: Locale }) {
+  const t = getTranslator(locale);
   return (
-    <a className={styles.brand} href="#top" aria-label="MyTani home">
+    <a className={styles.brand} href="#top" aria-label={t("MyTani home")}>
       <Image src="/images/mytani-wordmark-transparent.png" alt="" width={1100} height={416} sizes="(max-width: 850px) 125px, 145px" priority />
     </a>
   );
 }
 
-export function SiteNavigation() {
+export function SiteNavigation({ locale }: { locale: Locale }) {
+  const t = getTranslator(locale);
   const [activeHref, setActiveHref] = useState<string | null>(null);
 
   useEffect(() => {
@@ -67,21 +72,21 @@ export function SiteNavigation() {
     };
   }, []);
 
-  const renderLink = ({ href, label }: { href: string; label: string }) => (
+  const renderLink = ({ href, label }: { href: string; label: MessageKey }) => (
     <a
       aria-current={activeHref === href ? "location" : undefined}
       href={href}
       key={href}
       onClick={() => setActiveHref(href)}
     >
-      {label}
+      {t(label)}
     </a>
   );
 
   return (
     <div className={styles.navigation}>
-      <nav className={`glass-surface ${styles.nav}`} aria-label="Main navigation">
-        <Brand />
+      <nav className={`glass-surface ${styles.nav}`} aria-label={t("Main navigation")}>
+        <Brand locale={locale} />
         <div className={styles.navLinks}>{links.map(renderLink)}</div>
         <a
           aria-current={activeHref === contact.href ? "location" : undefined}
@@ -89,10 +94,11 @@ export function SiteNavigation() {
           href={contact.href}
           onClick={() => setActiveHref(contact.href)}
         >
-          {contact.label} <span aria-hidden="true">↗</span>
+          {t(contact.label)} <span aria-hidden="true">↗</span>
         </a>
+        <LanguageSwitcher locale={locale} />
         <details className={styles.mobileMenu}>
-          <summary>Menu <span aria-hidden="true">☰</span></summary>
+          <summary>{t("Menu")} <span aria-hidden="true">☰</span></summary>
           <div className={`glass-surface ${styles.mobilePanel}`}>{navigation.map(renderLink)}</div>
         </details>
       </nav>

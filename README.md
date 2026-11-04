@@ -32,3 +32,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Internationalization
+
+English and Indonesian are available at `/en` and `/id`, including the design system preview. Unprefixed page URLs redirect using a saved language choice, then the browser's `Accept-Language` preferences, with English as the fallback. The language dropdown saves the choice for one year and preserves the current page, query parameters and anchor. The site does not request geographic location.
+
+Translations live in `src/i18n/id.json`. English source text is the dictionary key; `getTranslator` checks keys at compile time. Translate new visible text, accessible labels and metadata when adding content.
+
+With Node.js 22.18+ (native TypeScript support), run `npm run test:i18n` for language negotiation tests. For production HTTP checks, run `npm run build`, start `npm run start -- --port 3012 --hostname 127.0.0.1`, then run `npm run test:i18n:http` in another terminal. `MYTANI_TEST_URL` can override the test server URL.

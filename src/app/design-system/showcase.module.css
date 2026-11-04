@@ -1,5 +1,5 @@
 .page { overflow: clip; }
-.topbar { align-items: center; display: flex; justify-content: space-between; padding: 1.35rem var(--space-page-gutter); }
+.topbar { flex-wrap: wrap; gap: 1rem; align-items: center; display: flex; justify-content: space-between; padding: 1.35rem var(--space-page-gutter); }
 .wordmark { color: inherit; font-family: var(--font-heading); font-size: 1.35rem; font-weight: 700; text-decoration: none; }
 .wordmark span { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; }
 .topnav { display: flex; gap: clamp(1rem, 3vw, 2.5rem); }

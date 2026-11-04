@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:i18n": "node --test tests/i18n.test.mjs",
+    "test:i18n:http": "node tests/i18n-http.mjs"
   },
   "dependencies": {
     "next": "16.4.4",

@@ -142,3 +142,9 @@ Project agents should follow `AGENTS.md` and select only the skills relevant to 
 5. `imagegen`: produce reference or illustrative imagery when needed; clearly distinguish generated images from actual company photography.
 
 These skills are already installed in the current environment. They are invoked as needed; this project does not silently install or duplicate them.
+
+## Language selection
+
+All pages have English (`/en`) and Indonesian (`/id`) routes. An explicit URL determines the language; otherwise, a saved `mytani-locale` cookie takes priority over the browser’s quality-ranked `Accept-Language` preferences. Regional Indonesian tags match Indonesian; unsupported languages fall back to English. No physical location is requested.
+
+The native language dropdown shows “English” and “Indonesia” on both pages, including mobile. It has a localized accessible label, a minimum 44 px touch target, semantic surface/text/border tokens, and the shared visible keyboard focus. Choosing a language saves a one-year preference and preserves the page path, query, and section anchor. Text, image descriptions, metadata, and enquiry messages are localized through the shared, typed dictionary in `src/i18n`.
