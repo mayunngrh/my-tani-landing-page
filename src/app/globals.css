@@ -13,6 +13,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   background: var(--color-surface-page);
   color: var(--color-text-primary);
   font-family: var(--font-body);
