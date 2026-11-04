@@ -18,7 +18,7 @@ const navigation = [...links, contact];
 export function Brand() {
   return (
     <a className={styles.brand} href="#top" aria-label="MyTani home">
-      <Image src="/images/mytani-wordmark.png" alt="" width={1100} height={416} sizes="(max-width: 850px) 125px, 145px" priority />
+      <Image src="/images/mytani-wordmark-transparent.png" alt="" width={1100} height={416} sizes="(max-width: 850px) 125px, 145px" priority />
     </a>
   );
 }
