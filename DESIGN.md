@@ -154,3 +154,7 @@ The custom language dropdown sits immediately before the contact button and show
 The homepage uses three real photos supplied in the Semi Husked Coconut folder: `IMG_3997.HEIC` for the hero, `IMG_3970.HEIC` for the product detail, and `IMG_3988.HEIC` for the people section. The last image shows coconut handling; do not describe it as a farm or assert ownership of the facility. Their web exports are `coconut-hero.webp` (1000 × 1000), `coconut-detail.webp` (800 × 1067), and `coconut-handling.webp` (1440 × 1080). Orientation is normalized and embedded metadata is stripped. Original HEIC and video files are not shipped. These real photographs do not carry illustrative-image labels.
 
 Keep image exports below 300 KiB each and the combined source budget below 700 KiB. Use responsive Next.js image sizes, eager/high-priority loading only for the hero, lazy loading for lower photos, and existing reserved image frames to avoid layout shifts. Preserve the supplied logo.
+
+## FAQ interaction
+
+Each FAQ card is one native button, including its padding and visible answer, so the entire card toggles on click, Enter or Space. Cards expand independently. `aria-expanded`, `aria-controls`, and the expanded answer description expose the state and content. Expansion and collapse use a reversible 240 ms CSS grid transition with a short opacity transition and a plus-to-minus icon. The answer remains mounted so quick repeated clicks reverse the current transition. Reduced-motion preference disables these transitions. No animation library is added.

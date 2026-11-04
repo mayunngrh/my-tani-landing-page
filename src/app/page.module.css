@@ -110,14 +110,7 @@
 
 .insights { background-image: radial-gradient(ellipse at 85% 62%, rgb(196 159 111 / 23%), transparent 38%); }
 .insightsGrid > div > p:last-child { max-width: 22rem; }
-.faq { display: grid; gap: 0.7rem; }
-.faq details { --glass-tint: rgb(247 241 227 / 56%); --glass-border: rgb(255 255 255 / 88%); border-radius: 1rem; padding: 0 1.25rem; }
-.faq summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 3.75rem; cursor: pointer; font-weight: 650; list-style: none; }
-.faq summary::-webkit-details-marker { display: none; }
-.faq summary span { font-size: 1.5rem; font-weight: 400; transition: transform var(--duration-fast) var(--ease-standard); }
-.faq details[open] summary span { transform: rotate(45deg); }
-.faq details p { margin: 0 0 1.25rem; max-width: 35rem; line-height: 1.7; }
-.faq details:focus-within { outline: var(--focus-width) solid var(--color-focus); outline-offset: var(--focus-offset); }
+.faq { display: grid; align-self: start; gap: 0.7rem; }
 
 .contact { background: radial-gradient(ellipse at 88% 25%, rgb(247 241 227 / 13%), transparent 35%), var(--color-olive-800); color: var(--color-cream-100); overflow: hidden; position: relative; scroll-margin-top: 7rem; --color-focus: var(--color-cream-100); }
 .contactInner { max-width: 88rem; padding: var(--space-section) var(--space-page-gutter); margin: auto; position: relative; z-index: 1; }

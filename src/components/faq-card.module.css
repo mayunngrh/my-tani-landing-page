@@ -1,0 +1,22 @@
+.card {
+  --glass-tint: rgb(247 241 227 / 56%);
+  --glass-border: rgb(255 255 255 / 88%);
+  display: block;
+  width: 100%;
+  padding: 0 1.25rem;
+  border-radius: var(--radius-medium);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 3.75rem; padding-block: 1rem; font-weight: 650; }
+.icon { flex: none; }
+.vertical { transform-origin: center; transition: transform var(--duration-normal) var(--ease-standard); }
+.card[aria-expanded="true"] .vertical { transform: scaleY(0); }
+.answer { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows var(--duration-normal) var(--ease-standard), opacity var(--duration-fast) var(--ease-standard); }
+.card[aria-expanded="true"] .answer { grid-template-rows: 1fr; opacity: 1; }
+.clip { min-height: 0; overflow: hidden; }
+.copy { display: block; padding-bottom: 1.25rem; max-width: 35rem; line-height: 1.7; }
+@media (prefers-reduced-motion: reduce) {
+  .answer, .vertical { transition: none; }
+}
