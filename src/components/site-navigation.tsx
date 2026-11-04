@@ -88,6 +88,7 @@ export function SiteNavigation({ locale }: { locale: Locale }) {
       <nav className={`glass-surface ${styles.nav}`} aria-label={t("Main navigation")}>
         <Brand locale={locale} />
         <div className={styles.navLinks}>{links.map(renderLink)}</div>
+        <LanguageSwitcher locale={locale} />
         <a
           aria-current={activeHref === contact.href ? "location" : undefined}
           className={`glass-surface glass-surface--dark ${styles.navCta}`}
@@ -96,7 +97,6 @@ export function SiteNavigation({ locale }: { locale: Locale }) {
         >
           {t(contact.label)} <span aria-hidden="true">↗</span>
         </a>
-        <LanguageSwitcher locale={locale} />
         <details className={styles.mobileMenu}>
           <summary>{t("Menu")} <span aria-hidden="true">☰</span></summary>
           <div className={`glass-surface ${styles.mobilePanel}`}>{navigation.map(renderLink)}</div>
