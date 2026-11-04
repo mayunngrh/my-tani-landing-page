@@ -9,7 +9,8 @@
     "lint": "eslint",
     "test:i18n": "node --test tests/i18n.test.mjs",
     "test:i18n:http": "node tests/i18n-http.mjs",
-    "test:images": "node --test tests/image-budget.test.mjs"
+    "test:images": "node --test tests/image-budget.test.mjs",
+    "test:content": "node --test tests/content.test.mjs"
   },
   "dependencies": {
     "next": "16.4.4",

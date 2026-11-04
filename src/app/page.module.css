@@ -218,3 +218,19 @@
 .serviceApproach { margin-top: 2.5rem; padding: 1.5rem; border-radius: var(--radius-medium); }
 .serviceApproach h3 { margin: 0 0 0.75rem; font-family: var(--font-heading); font-size: 1.6rem; font-weight: 500; }
 .serviceApproach p { margin: 0; max-width: 65ch; line-height: 1.7; }
+
+.advantages { max-width: 88rem; margin: 4rem auto 0; padding: clamp(1.5rem, 3vw, 3rem); border-radius: var(--radius-large); }
+.advantages h3, .orderPanel h3 { font-family: var(--font-heading); font-size: clamp(1.8rem, 3vw, 2.7rem); font-weight: 500; line-height: 1.15; margin: 0 0 1.5rem; }
+.advantageList { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 3rem; margin: 0; }
+.advantageList > div { border-top: 1px solid rgb(57 64 30 / 25%); padding-top: 1.2rem; }
+.advantageList dt { font-weight: 650; }
+.advantageList dd { margin: 0.5rem 0 0; line-height: 1.7; font-size: 0.95rem; }
+.orderDetails { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+.orderPanel { padding: clamp(1.25rem, 3vw, 2.25rem); border-radius: var(--radius-large); }
+.orderPanel p { margin: 1.25rem 0 0; line-height: 1.7; font-size: 0.9rem; }
+.gradeTable { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.gradeTable th, .gradeTable td { padding: 0.85rem 0.25rem; border-bottom: 1px solid rgb(57 64 30 / 25%); text-align: left; }
+.gradeTable thead th { font-size: 0.8rem; font-weight: 550; }
+.packingList { padding-left: 1.25rem; margin: 0; line-height: 1.8; }
+.exportInfo .exportValue { font-size: 1rem; font-weight: 650; margin-bottom: 0.75rem; }
+@media (max-width: 700px) { .advantageList, .orderDetails { grid-template-columns: 1fr; } }

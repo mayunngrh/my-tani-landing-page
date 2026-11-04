@@ -44,3 +44,7 @@ With Node.js 22.18+ (native TypeScript support), run `npm run test:i18n` for lan
 ## Photo performance
 
 The three supplied coconut photos are resized, orientation-corrected WebP exports with camera metadata removed. Run `npm run test:images` to enforce the 300 KiB per-photo / 700 KiB combined source budget and check dimensions and metadata. The homepage uses responsive `next/image` delivery, a high-priority hero, and lazy-loaded lower photos. Originals and videos remain outside the deployed site. Source-photo provenance is recorded in `DESIGN.md`.
+
+## Content coverage checks
+
+After `npm run build`, run `npm run test:content` to verify the approved specifications, grade ranges, packing, MOQ/trade terms and product applications in both rendered languages, and preserve navigation section order. `docs/content-review.md` records coverage and the one unresolved water-content measurement.
