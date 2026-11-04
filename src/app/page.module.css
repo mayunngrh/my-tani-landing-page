@@ -214,3 +214,7 @@
   .nav { padding-inline: 0.5rem; }
   .brand { width: 88px; height: 34px; }
 }
+
+.serviceApproach { margin-top: 2.5rem; padding: 1.5rem; border-radius: var(--radius-medium); }
+.serviceApproach h3 { margin: 0 0 0.75rem; font-family: var(--font-heading); font-size: 1.6rem; font-weight: 500; }
+.serviceApproach p { margin: 0; max-width: 65ch; line-height: 1.7; }

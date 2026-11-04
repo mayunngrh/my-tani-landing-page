@@ -162,3 +162,7 @@ Each FAQ card is one native button, including its padding and visible answer, so
 ## Contact cards
 
 The email, WhatsApp and location cards are single full-card links with decorative outline icons, visible labels and values, and the shared keyboard focus. Email opens a localized mail enquiry; WhatsApp opens the existing enquiry link; location opens a general Bali, Indonesia map search, without suggesting a confirmed office address. External links use a new tab with `noopener noreferrer`.
+
+## Source-content coverage review
+
+The bilingual source-copy review is tracked in `docs/content-review.md`, with each supplied specification and business claim marked as covered or pending owner clarification. Product applications and service aims have been added in both languages. Numerical specifications, ambiguous water content and grade boundaries, commercial terms, and unsupported operational/comparative claims remain pending; the attachment alone does not confirm them. Keep the checklist synchronized when the owner supplies corrections or confirmation.
