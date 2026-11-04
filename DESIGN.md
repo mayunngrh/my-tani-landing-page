@@ -158,3 +158,7 @@ Keep image exports below 300 KiB each and the combined source budget below 700 K
 ## FAQ interaction
 
 Each FAQ card is one native button, including its padding and visible answer, so the entire card toggles on click, Enter or Space. Cards expand independently. `aria-expanded`, `aria-controls`, and the expanded answer description expose the state and content. Expansion and collapse use a reversible 240 ms CSS grid transition with a short opacity transition and a plus-to-minus icon. The answer remains mounted so quick repeated clicks reverse the current transition. Reduced-motion preference disables these transitions. No animation library is added.
+
+## Contact cards
+
+The email, WhatsApp and location cards are single full-card links with decorative outline icons, visible labels and values, and the shared keyboard focus. Email opens a localized mail enquiry; WhatsApp opens the existing enquiry link; location opens a general Bali, Indonesia map search, without suggesting a confirmed office address. External links use a new tab with `noopener noreferrer`.
