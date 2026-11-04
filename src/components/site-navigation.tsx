@@ -5,9 +5,10 @@ import { useEffect, useState } from "react";
 import styles from "@/app/page.module.css";
 
 const links = [
-  { href: "#about", label: "Our story", sections: ["home", "about", "people"] },
-  { href: "#product", label: "Our coconut", sections: ["product", "specifications"] },
-  { href: "#process", label: "Our process", sections: ["process"] },
+  { href: "#home", label: "Home", sections: ["home"] },
+  { href: "#about", label: "Story", sections: ["about", "people"] },
+  { href: "#product", label: "Coconuts", sections: ["product", "specifications"] },
+  { href: "#process", label: "Process", sections: ["process"] },
   { href: "#export", label: "Export info", sections: ["export"] },
   { href: "#insights", label: "FAQs", sections: ["insights"] },
 ];

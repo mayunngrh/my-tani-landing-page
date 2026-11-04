@@ -24,7 +24,7 @@ export default function Home() {
             <p className={styles.eyebrow}><span /> Bali, Indonesia</p>
             <h1 id="hero-title">Rooted in Bali.<br /><em>Ready for the world.</em></h1>
             <p className={styles.heroDescription}>Semi-husked coconuts from Bali, thoughtfully brought closer to your business.</p>
-            <div className={styles.actions}><a className={`glass-surface ${styles.buttonLight}`} href="#product">Explore our coconut <span aria-hidden="true">↗</span></a><a className={styles.textLinkLight} href="#about">Our story <span aria-hidden="true">↓</span></a></div>
+            <div className={styles.actions}><a className={`glass-surface ${styles.buttonLight}`} href="#product">Explore our coconut <span aria-hidden="true">↗</span></a><a className={styles.textLinkLight} href="#about">Story <span aria-hidden="true">↓</span></a></div>
           </div>
           <div className={styles.heroVisual}>
             <div className={styles.heroImage}><Image src="/images/coconut-product.png" alt="Illustrative image of mature semi-husked coconuts" fill priority sizes="(max-width: 800px) 100vw, 55vw" /></div>
@@ -36,12 +36,12 @@ export default function Home() {
       </section>
 
       <section id="about" className={`${styles.section} ${styles.about}`} aria-labelledby="about-title">
-        <div className={styles.sectionMarker}><span>Our story</span><span>Bali, Indonesia</span></div>
+        <div className={styles.sectionMarker}><span>Story</span><span>Bali, Indonesia</span></div>
         <div className={styles.aboutGrid}><div><p className={styles.eyebrowDark}>From our island to your business</p><h2 id="about-title">A little island.<br /><em>A bigger purpose.</em></h2></div><div className={`glass-surface ${styles.aboutText}`}><p className={styles.lead}>A connection that starts with the people and the land behind every coconut.</p><p>MyTani is a Bali-based coconut supplier focused on bringing semi-husked coconuts to businesses around the world. We believe good partnerships begin with clear communication, care for the product and respect for the people who grow it.</p><a className={styles.inlineLink} href="#people">The people behind it <span aria-hidden="true">↗</span></a></div></div>
       </section>
 
       <section id="product" className={styles.product} aria-labelledby="product-title">
-        <div className={styles.productHead}><div><p className={styles.eyebrowDark}>Our coconut</p><h2 id="product-title">Nature’s most<br /><em>versatile fruit.</em></h2></div><p>One carefully considered product, with possibilities that reach far beyond the shell.</p></div>
+        <div className={styles.productHead}><div><p className={styles.eyebrowDark}>Coconuts</p><h2 id="product-title">Nature’s most<br /><em>versatile fruit.</em></h2></div><p>One carefully considered product, with possibilities that reach far beyond the shell.</p></div>
         <div className={styles.productGrid}>
           <div className={styles.productImage}><Image src="/images/coconut-product.png" alt="Illustrative image of a group of mature coconuts" fill sizes="(max-width: 800px) 100vw, 55vw" /><span>Illustrative image</span></div>
           <div className={`glass-surface ${styles.productDetail}`}><div className={styles.detailTop}><span>From Bali, Indonesia</span><span aria-hidden="true">◒</span></div><h3>Semi-husked<br />coconut</h3><p>Known locally as kelapa kupas jambul, these mature coconuts are partially dehusked with some fibre left around the shell.</p><p>Suitable for businesses sourcing coconuts for processing or retail. Tell us what you need and we’ll help you explore the available options.</p><a className={styles.inlineLink} href="#specifications">Explore specifications <span aria-hidden="true">↓</span></a></div>
@@ -70,7 +70,7 @@ export default function Home() {
 
       <section id="contact" className={styles.contact} aria-labelledby="contact-title"><div className={styles.contactCircle} aria-hidden="true" /><div className={styles.contactInner}><p className={styles.eyebrow}>Let’s grow together</p><h2 id="contact-title">A good partnership<br /><em>starts here.</em></h2><p>Have a question or a coconut requirement in mind? We’d love to hear from you.</p><div className={styles.actions}><a className={`glass-surface ${styles.buttonLight}`} href={whatsapp} target="_blank" rel="noreferrer">Chat on WhatsApp <span aria-hidden="true">↗</span></a><a className={styles.textLinkLight} href={email}>Send us an email <span aria-hidden="true">↗</span></a></div><div className={styles.contactInfo}><div className="glass-surface glass-surface--dark"><span>Email</span><a href={email}>mytanibali@gmail.com</a></div><div className="glass-surface glass-surface--dark"><span>WhatsApp</span><a href={whatsapp} target="_blank" rel="noreferrer">+62 877 9714 1007</a></div><div className="glass-surface glass-surface--dark"><span>Based in</span><strong>Bali, Indonesia</strong></div></div></div></section>
 
-      <footer className={`glass-surface ${styles.footer}`}><div><Brand /><p>Rooted in Bali.<br />Ready for the world.</p></div><div className={styles.footerLinks}><div><strong>Explore</strong><a href="#about">Our story</a><a href="#product">Our coconut</a><a href="#process">Our process</a><a href="#export">Export info</a></div><div><strong>Connect</strong><a href={email}>Email</a><a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp</a><a href="#contact">Contact</a></div></div><div className={styles.footerBottom}><span>© MyTani. All rights reserved.</span><a href="#top">Back to top ↑</a></div></footer>
+      <footer className={`glass-surface ${styles.footer}`}><div><Brand /><p>Rooted in Bali.<br />Ready for the world.</p></div><div className={styles.footerLinks}><div><strong>Explore</strong><a href="#home">Home</a><a href="#about">Story</a><a href="#product">Coconuts</a><a href="#process">Process</a><a href="#export">Export info</a></div><div><strong>Connect</strong><a href={email}>Email</a><a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp</a><a href="#contact">Contact</a></div></div><div className={styles.footerBottom}><span>© MyTani. All rights reserved.</span><a href="#top">Back to top ↑</a></div></footer>
     </main>
   );
 }
