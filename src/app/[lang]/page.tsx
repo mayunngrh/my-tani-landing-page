@@ -44,6 +44,11 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         <div className={styles.aboutGrid}><div><p className={styles.eyebrowDark}>{t("From our island to your business")}</p><h2 id="about-title">{t("A little island.")}<br /><em>{t("A bigger purpose.")}</em></h2></div><div className={`glass-surface ${styles.aboutText}`}><p className={styles.lead}>{t("A connection that starts with the people and the land behind every coconut.")}</p><p>{t("MyTani is a Bali-based coconut supplier focused on bringing semi-husked coconuts to businesses around the world. We believe good partnerships begin with clear communication, care for the product and respect for the people who grow it.")}</p><a className={styles.inlineLink} href="#people">{t("The people behind it")} <span aria-hidden="true">↗</span></a></div></div>
       </section>
 
+      <section id="people" className={styles.people} aria-labelledby="people-title">
+        <div className={styles.peopleImage}><Image src="/images/coconut-grove.png" alt={t("Illustrative image of coconuts in a tropical grove")} fill sizes="100vw" /><div className={styles.peopleShade} /><span className={styles.imageNote}>{t("Illustrative image")}</span></div>
+        <div className={`glass-surface glass-surface--dark ${styles.peopleContent}`}><p className={styles.eyebrow}>{t("People & place")}</p><h2 id="people-title">{t("Good things")}<br />{t("grow")} <em>{t("together.")}</em></h2><p>{t("Behind every coconut is a community. Our ambition is to create opportunities for local farmers and contribute to livelihoods in Bali as we grow.")}</p><a className={styles.textLinkLight} href="#contact">{t("Get to know MyTani")} <span aria-hidden="true">↗</span></a></div>
+      </section>
+
       <section id="product" className={styles.product} aria-labelledby="product-title">
         <div className={styles.productHead}><div><p className={styles.eyebrowDark}>{t("Coconuts")}</p><h2 id="product-title">{t("Nature’s most")}<br /><em>{t("versatile fruit.")}</em></h2></div><p>{t("One carefully considered product, with possibilities that reach far beyond the shell.")}</p></div>
         <div className={styles.productGrid}>
@@ -55,11 +60,6 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       <section id="specifications" className={`${styles.section} ${styles.specs}`} aria-labelledby="spec-title">
         <div className={styles.sectionMarker}><span>{t("Product details")}</span><span>{t("Semi-husked coconut")}</span></div>
         <div className={styles.specGrid}><div><p className={styles.eyebrowDark}>{t("The essentials")}</p><h2 id="spec-title">{t("The details")}<br /><em>{t("matter.")}</em></h2><p className={styles.specIntro}>{t("Every order begins with understanding what you need. Confirm the current grades and specifications directly with our team.")}</p><a className={`glass-surface glass-surface--dark ${styles.buttonDark}`} href={whatsapp} target="_blank" rel="noreferrer">{t("Ask about specifications")} <span aria-hidden="true">↗</span></a></div><dl className={`glass-surface ${styles.specList}`}><div><dt>{t("Product")}</dt><dd>{t("Semi-husked coconut")}</dd></div><div><dt>{t("Origin")}</dt><dd>{t("Bali, Indonesia")}</dd></div><div><dt>{t("Form")}</dt><dd>{t("Mature coconut, partially dehusked")}</dd></div><div><dt>{t("Grades & sizing")}</dt><dd>{t("Available upon enquiry")}</dd></div><div><dt>{t("Packing")}</dt><dd>{t("Discuss with our team")}</dd></div><div><dt>{t("Availability")}</dt><dd>{t("Confirmed per order")}</dd></div></dl></div>
-      </section>
-
-      <section id="people" className={styles.people} aria-labelledby="people-title">
-        <div className={styles.peopleImage}><Image src="/images/coconut-grove.png" alt={t("Illustrative image of coconuts in a tropical grove")} fill sizes="100vw" /><div className={styles.peopleShade} /><span className={styles.imageNote}>{t("Illustrative image")}</span></div>
-        <div className={`glass-surface glass-surface--dark ${styles.peopleContent}`}><p className={styles.eyebrow}>{t("People & place")}</p><h2 id="people-title">{t("Good things")}<br />{t("grow")} <em>{t("together.")}</em></h2><p>{t("Behind every coconut is a community. Our ambition is to create opportunities for local farmers and contribute to livelihoods in Bali as we grow.")}</p><a className={styles.textLinkLight} href="#contact">{t("Get to know MyTani")} <span aria-hidden="true">↗</span></a></div>
       </section>
 
       <section id="process" className={`${styles.section} ${styles.process}`} aria-labelledby="process-title">

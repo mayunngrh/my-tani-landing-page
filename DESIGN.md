@@ -121,7 +121,7 @@ Use semantic landmarks, a logical heading hierarchy, keyboard-operable controls,
 
 ## Proposed homepage structure
 
-Navigation → Hero → About → Semi-husked Coconut → Specifications → Farmer Story → Process → Export Information → FAQ → Contact → Footer. Prioritize a clear enquiry path. The FAQ provides initial educational content; longer insights can be added when verified material is ready.
+Navigation → Hero → About → Farmer Story → Semi-husked Coconut → Specifications → Process → Export Information → FAQ → Contact → Footer. The About and Farmer Story sections form one continuous Story navigation group; Product and Specifications form the next group. Scrolling down must follow the navigation order without returning to an earlier item. Prioritize a clear enquiry path. The FAQ provides initial educational content; longer insights can be added when verified material is ready.
 
 ## Editorial and verification checklist
 
