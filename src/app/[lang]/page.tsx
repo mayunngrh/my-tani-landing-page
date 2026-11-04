@@ -31,9 +31,8 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
             <div className={styles.actions}><a className={`glass-surface ${styles.buttonLight}`} href="#product">{t("Explore our coconut")} <span aria-hidden="true">↗</span></a><a className={styles.textLinkLight} href="#about">{t("Story")} <span aria-hidden="true">↓</span></a></div>
           </div>
           <div className={styles.heroVisual}>
-            <div className={styles.heroImage}><Image src="/images/coconut-product.png" alt={t("Illustrative image of mature semi-husked coconuts")} fill priority sizes="(max-width: 800px) 100vw, 55vw" /></div>
+            <div className={styles.heroImage}><Image src="/images/coconut-hero.webp" alt={t("Close-up of mature coconuts with brown husks")} fill loading="eager" fetchPriority="high" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 850px) 560px, (max-width: 1440px) 48vw, 688px" /></div>
             <div className={`glass-surface ${styles.heroTag}`}><span className={styles.tagIcon} aria-hidden="true">◒</span><div><strong>{t("One remarkable fruit.")}</strong><small>{t("From Bali, with care.")}</small></div></div>
-            <p className={styles.heroCaption}>{t("Illustrative image")}</p>
           </div>
           <div className={styles.heroBottom}><span>{t("Rooted in nature. Made for connection.")}</span><a href="#about">{t("Scroll to discover")} <span aria-hidden="true">↓</span></a></div>
         </div>
@@ -45,14 +44,14 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       </section>
 
       <section id="people" className={styles.people} aria-labelledby="people-title">
-        <div className={styles.peopleImage}><Image src="/images/coconut-grove.png" alt={t("Illustrative image of coconuts in a tropical grove")} fill sizes="100vw" /><div className={styles.peopleShade} /><span className={styles.imageNote}>{t("Illustrative image")}</span></div>
+        <div className={styles.peopleImage}><Image src="/images/coconut-handling.webp" alt={t("People handling coconuts in a covered sorting area")} fill loading="lazy" sizes="100vw" /><div className={styles.peopleShade} /></div>
         <div className={`glass-surface glass-surface--dark ${styles.peopleContent}`}><p className={styles.eyebrow}>{t("People & place")}</p><h2 id="people-title">{t("Good things")}<br />{t("grow")} <em>{t("together.")}</em></h2><p>{t("Behind every coconut is a community. Our ambition is to create opportunities for local farmers and contribute to livelihoods in Bali as we grow.")}</p><a className={styles.textLinkLight} href="#contact">{t("Get to know MyTani")} <span aria-hidden="true">↗</span></a></div>
       </section>
 
       <section id="product" className={styles.product} aria-labelledby="product-title">
         <div className={styles.productHead}><div><p className={styles.eyebrowDark}>{t("Coconuts")}</p><h2 id="product-title">{t("Nature’s most")}<br /><em>{t("versatile fruit.")}</em></h2></div><p>{t("One carefully considered product, with possibilities that reach far beyond the shell.")}</p></div>
         <div className={styles.productGrid}>
-          <div className={styles.productImage}><Image src="/images/coconut-product.png" alt={t("Illustrative image of a group of mature coconuts")} fill sizes="(max-width: 800px) 100vw, 55vw" /><span>{t("Illustrative image")}</span></div>
+          <div className={styles.productImage}><Image src="/images/coconut-detail.webp" alt={t("A single semi-husked coconut showing the retained fibre")} fill loading="lazy" sizes="(max-width: 850px) calc(100vw - 40px), (max-width: 1500px) 50vw, 740px" /></div>
           <div className={`glass-surface ${styles.productDetail}`}><div className={styles.detailTop}><span>{t("From Bali, Indonesia")}</span><span aria-hidden="true">◒</span></div><h3>{t("Semi-husked")}<br />{t("coconut")}</h3><p>{t("Known locally as kelapa kupas jambul, these mature coconuts are partially dehusked with some fibre left around the shell.")}</p><p>{t("Suitable for businesses sourcing coconuts for processing or retail. Tell us what you need and we’ll help you explore the available options.")}</p><a className={styles.inlineLink} href="#specifications">{t("Explore specifications")} <span aria-hidden="true">↓</span></a></div>
         </div>
       </section>

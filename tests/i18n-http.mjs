@@ -25,7 +25,7 @@ for(const locale of ['en','id'])for(const page of ['','/design-system']){
  assert.match(html,/hreflang="en"/i);assert.match(html,/hreflang="id"/i);
  console.log('PASS explicit locale, metadata and content',locale+page);
 }
-for(const asset of ['/images/mytani-wordmark-transparent.png','/images/coconut-product.png']){
+for(const asset of ['/images/mytani-wordmark-transparent.png','/images/coconut-hero.webp','/images/coconut-detail.webp','/images/coconut-handling.webp']){
  const r=await fetch(base+asset,{redirect:'manual'});assert.equal(r.status,200);console.log('PASS asset bypass',asset);
 }
 const missing=await fetch(base+'/fr');assert.equal(missing.status,404);console.log('PASS unknown route returns 404');

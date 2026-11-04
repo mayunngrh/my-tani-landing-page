@@ -40,3 +40,7 @@ English and Indonesian are available at `/en` and `/id`, including the design sy
 Translations live in `src/i18n/id.json`. English source text is the dictionary key; `getTranslator` checks keys at compile time. Translate new visible text, accessible labels and metadata when adding content.
 
 With Node.js 22.18+ (native TypeScript support), run `npm run test:i18n` for language negotiation tests. For production HTTP checks, run `npm run build`, start `npm run start -- --port 3012 --hostname 127.0.0.1`, then run `npm run test:i18n:http` in another terminal. `MYTANI_TEST_URL` can override the test server URL.
+
+## Photo performance
+
+The three supplied coconut photos are resized, orientation-corrected WebP exports with camera metadata removed. Run `npm run test:images` to enforce the 300 KiB per-photo / 700 KiB combined source budget and check dimensions and metadata. The homepage uses responsive `next/image` delivery, a high-priority hero, and lazy-loaded lower photos. Originals and videos remain outside the deployed site. Source-photo provenance is recorded in `DESIGN.md`.
