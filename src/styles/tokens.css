@@ -52,15 +52,15 @@
   --focus-width: 3px;
   --focus-offset: 3px;
 
-  /* Component-level glass tokens, deliberately restrained for readable text. */
+  /* Shared liquid-glass material tokens. Keep text contrast readable as light passes through. */
   --glass-text: var(--color-olive-900);
   --glass-fallback: var(--color-cream-100);
-  --glass-tint: rgb(247 241 227 / 92%);
-  --glass-border: rgb(57 64 30 / 20%);
+  --glass-tint: rgb(247 241 227 / 58%);
+  --glass-border: rgb(255 255 255 / 62%);
   --glass-border-width: 1px;
-  --glass-blur: 18px;
-  --glass-saturation: 120%;
-  --glass-shadow: 0 8px 28px rgb(38 44 20 / 12%), inset 0 1px 0 rgb(255 255 255 / 45%);
+  --glass-blur: 24px;
+  --glass-saturation: 165%;
+  --glass-shadow: 0 20px 55px rgb(38 44 20 / 16%), inset 0 1px 0 rgb(255 255 255 / 78%), inset 0 -1px 0 rgb(255 255 255 / 24%);
   --button-height: 3rem;
   --button-padding-inline: var(--space-6);
   --button-radius: var(--radius-pill);

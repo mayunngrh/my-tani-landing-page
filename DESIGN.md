@@ -12,10 +12,10 @@ Voice: warm, direct, confident and practical. English is the proposed primary we
 
 ## Creative direction: Coconut Lens
 
-The logo's alternate coconut halves provide the visual signature. Translate their arc into large, intentional image masks, section silhouettes, or a distinctive graphic frame. Let the product and the people behind it remain recognizable. Olive, coconut-shell brown, and warm cream give the brand its grounded character; a restrained translucent material suggests coconut water and adds a contemporary layer.
+The logo's alternate coconut halves provide the visual signature. Translate their arc into large, intentional image masks, section silhouettes, or a distinctive graphic frame. Let the product and the people behind it remain recognizable. Olive, coconut-shell brown, and warm cream give the brand its grounded character; visible, layered liquid-glass surfaces bring the contemporary layer to the complete landing page.
 
 - Make one strong visual gesture per section. Avoid turning the whole page into repeated rounded cards.
-- Use the supplied logo as an asset, preserving its proportions, colors and distinctive letterforms. Do not redraw it as ordinary text. A clean original vector or high-resolution transparent file is still needed.
+- Use the supplied logo as an asset, preserving its proportions, colors and distinctive letterforms. The full supplied image stays at `public/images/mytani-logo-source.png`; `public/images/mytani-wordmark.png` is a close crop from that original canvas for the website. Keep the cropped image proportional with `object-fit: contain`, never zoom or crop it again. A clean original vector or high-resolution transparent file is still welcome.
 - Favor genuine imagery of semi-husked coconuts, local sourcing, packing and handling when available. Treat generated imagery as illustrative and never present it as evidence of real facilities, people or business activity.
 - The previously generated moodboard is an exploratory reference, not an exact UI specification; its claims and photography are illustrative.
 
@@ -61,7 +61,7 @@ Radii: small `0.5rem`, medium `1rem`, large `1.5rem`, pill `9999px`. Use pill ge
 
 ## Liquid glass material
 
-The material is a translucent interface layer, with a softly blurred backdrop, a restrained olive or cream tint, a fine edge, and subtle depth. It is designed to support wayfinding while allowing the content behind it to remain visible. It is not an imitation of a particular operating system, nor does CSS blur by itself reproduce physical refraction.
+The material is a visibly translucent interface layer, with a softened backdrop, olive or cream tint, a fine reflective edge, and layered depth. Give every homepage section at least one deliberate glass surface so the material reads throughout the page while preserving clear hierarchy and accessible text. It is not an imitation of a particular operating system, nor does CSS blur by itself reproduce physical refraction.
 
 ### Implementation
 
@@ -75,14 +75,14 @@ The usable surface is `.glass-surface` in `src/app/globals.css`. Use `.glass-sur
 
 | Property | Default |
 | --- | --- |
-| Light tint | cream at 92% opacity |
-| Dark tint | deep olive at 92% opacity |
-| Backdrop | 18px blur, 120% saturation where supported |
-| Edge | 1px, soft contrast appropriate to the variant |
-| Depth | soft shadow plus a subtle inner highlight |
+| Light tint | cream at 58% opacity by default; adjust per surface for contrast |
+| Dark tint | deep olive at 80% opacity by default; adjust per surface for contrast |
+| Backdrop | 24px blur, 165% saturation where supported |
+| Edge | 1px, brighter upper rim with a soft lower edge |
+| Depth | tinted shadow, glossy gradient, and inner edge highlights |
 | Fallback | opaque cream or olive if blur is unsupported |
 
-Suggested uses: floating navigation, a small product detail chip, and a secondary overlay control. Primary CTA and long-form content should remain legible and have a clear surface. Avoid multiple overlapping blur layers, glass over every card, excessively bright rims, or large animated liquid distortions. Re-check contrast over the lightest and darkest real imagery.
+Use the material deliberately throughout the page: navigation and calls to action, narrative and product information, specifications, process steps, export details, FAQ, contact details, and footer. Let warm color washes or real photography sit behind important glass panels so refraction is visibly apparent. Avoid stacking translucent layers directly on each other, hiding essential text in busy photographs, or adding large animated distortions. Re-check contrast over the lightest and darkest imagery.
 
 When the browser supports `prefers-reduced-transparency: reduce` or `prefers-contrast: more`, the glass becomes solid and drops blur and shadow. Since support for preference queries varies, the solid `@supports` fallback is also provided; test target browsers. Use accessible text and control contrast in every state. Limit blur areas on mobile to manage performance.
 
@@ -103,8 +103,8 @@ import { TextField } from "@/components/ui/text-field";
 
 `Button` defaults to `type="button"`; use `type="submit"` only in an actual form. `ButtonLink` is for navigation, and has no disabled state. `TextField` requires a unique `id` and visible `label`, and supports `hint` or `error` with accessible descriptions. The example fields on the preview do not submit data.
 
-- **Navigation:** semantic `nav`; readable light or dark glass; links and a clear enquiry CTA. Provide keyboard-operable mobile menu, visible focus, and a non-glass fallback.
-- **Primary button:** solid olive on cream or cream on olive, 48 px minimum height, pill radius, concise action label. Include hover, pressed, disabled, loading (if relevant) and focus-visible states. Do not depend on glass to communicate priority.
+- **Navigation:** semantic `nav`; readable light or dark glass; links and a clear enquiry CTA. Keep it available while scrolling, mark the current section with `aria-current`, provide a keyboard-operable mobile menu, visible focus, and a solid fallback.
+- **Primary button:** high-contrast cream or olive glass with a clear bright edge, 48 px minimum height, pill radius, concise action label. Include hover, pressed, disabled, loading (if relevant) and focus-visible states. Keep the action prominent through contrast and placement.
 - **Secondary button:** outlined or glass depending on context, with a visible boundary and sufficient contrast in every state. Use a real `button` for actions and a link for navigation.
 - **Product details:** prefer a structured list or table for specifications and grades. Tables must remain readable at narrow widths, with headings associated with their data.
 - **Inputs:** persistent visible labels, 16 px body text, 44 px minimum control height, clear focus and inline error messages. Avoid treating placeholder text as a label.
