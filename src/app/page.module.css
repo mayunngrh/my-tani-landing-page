@@ -103,8 +103,9 @@
 .exportInner { max-width: 82rem; margin: auto; display: grid; grid-template-columns: 1fr 0.8fr; gap: 6rem; }
 .exportInner > div:first-child > p:not(.eyebrow) { max-width: 28rem; line-height: 1.8; margin: 2rem 0; }
 .exportInfo { display: grid; gap: 0.85rem; }
-.exportInfo > div { --glass-tint: rgb(38 44 20 / 82%); --glass-border: rgb(247 241 227 / 52%); display: grid; grid-template-columns: 2.5rem 1fr; gap: 0 1rem; padding: 1.25rem 1.5rem; border-radius: 1.1rem; }
-.exportInfo span { grid-row: span 2; font-size: 0.75rem; }
+.exportInfo > div { --glass-tint: rgb(38 44 20 / 82%); --glass-border: rgb(247 241 227 / 52%); display: grid; grid-template-columns: 2rem minmax(0, 1fr); gap: 0 1rem; padding: 1.25rem 1.5rem; border-radius: 1.1rem; }
+.exportInfo > div > span { font-size: 0.75rem; }
+.exportContent { min-width: 0; }
 .exportInfo h3 { font-size: 1.5rem; }
 .exportInfo p { max-width: 23rem; }
 
